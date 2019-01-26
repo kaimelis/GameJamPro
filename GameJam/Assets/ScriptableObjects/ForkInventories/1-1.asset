@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d587aa228aa848a4f890794a476511c4, type: 3}
-  m_Name: BlueFork
+  m_Script: {fileID: 11500000, guid: 8879d33dcb78af94489639e9cbe167c7, type: 3}
+  m_Name: 1-1
   m_EditorClassIdentifier: 
-  sentString: 
-  sentInt: 0
-  sentFloat: 0
-  sentBool: 0
+  red:
+    available: 2
+  green:
+    available: 1
+  blue:
+    available: 0

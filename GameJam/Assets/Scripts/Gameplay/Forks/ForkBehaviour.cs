@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ForkBehaviour : MonoBehaviour
 {
-    private Rigidbody _rigidbody;    
-    [SerializeField] private ForkTypeSO _forkType;    
+    private Rigidbody _rigidbody = null;    
+    [SerializeField] private ForkTypeSO _forkType = null;    
     private SphereCollider _WaveCollider;
     private bool _activated = false;
-    public GameEvent eventToRaise;
-    private ScannerEffectDemo mainCamera;
+    [SerializeField] private GameEvent ForkHitEvent = null;
+    [SerializeField] private GameEvent ForDestroyEvent = null;
+    private ScannerEffectDemo mainCamera = null;
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -27,7 +29,7 @@ public class ForkBehaviour : MonoBehaviour
             _WaveCollider.radius = _forkType.radius;
             _WaveCollider.enabled = true;
             _activated = true;
-            eventToRaise.Raise();            
+            ForkHitEvent.Raise();            
             mainCamera.ScannerOrigin = gameObject.transform;
             mainCamera.StartScanning();
             StartCoroutine("ShrinkRadius");
@@ -51,6 +53,7 @@ public class ForkBehaviour : MonoBehaviour
         DestroyFork();
     }
     void DestroyFork(){
+        ForDestroyEvent.Raise();
         Destroy(gameObject);
     }
 }

@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8971988572d6b364ca700786ccdc52a4, type: 2}
+  - {fileID: 2100000, guid: 0d90a4759f3238a429573b7aabab3177, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _forkType: {fileID: 11400000, guid: 1d6bebb0fd9484341a830376288c4691, type: 2}
-  eventToRaise: {fileID: 11400000, guid: c450567fad2bc954cbb481cc20d13c6e, type: 2}
+  ForkHitEvent: {fileID: 11400000, guid: 17472c0a9dda2e64eb89f4d034008eee, type: 2}
+  ForDestroyEvent: {fileID: 11400000, guid: 45a719d418f00b344a8e61d11d5ed9ba, type: 2}
 --- !u!135 &8470466376327228126
 SphereCollider:
   m_ObjectHideFlags: 0

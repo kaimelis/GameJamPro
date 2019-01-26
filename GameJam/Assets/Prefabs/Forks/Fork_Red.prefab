@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _forkType: {fileID: 11400000, guid: 1d6bebb0fd9484341a830376288c4691, type: 2}
-  eventToRaise: {fileID: 11400000, guid: c450567fad2bc954cbb481cc20d13c6e, type: 2}
+  ForkHitEvent: {fileID: 11400000, guid: c450567fad2bc954cbb481cc20d13c6e, type: 2}
+  ForDestroyEvent: {fileID: 11400000, guid: 1ccbb351f67773c45bdcd9fb7f4abf29, type: 2}
 --- !u!135 &8470466376327228126
 SphereCollider:
   m_ObjectHideFlags: 0
