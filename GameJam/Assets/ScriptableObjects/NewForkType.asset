@@ -15,4 +15,4 @@ MonoBehaviour:
   _wavetype: 0
   radius: 5
   weight: 1
-  fadeRate: 0.5
+  fadeRate: 0.1

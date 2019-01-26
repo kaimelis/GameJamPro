@@ -15,7 +15,7 @@ namespace GameJam
         private Vector3 input;
         private void Awake() 
         {
-            chController = GetComponentInChildren<CharacterController>();
+            chController = GetComponent<CharacterController>();
         }
 
         private void Update() 

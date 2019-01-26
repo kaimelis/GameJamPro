@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 8435363293441921247}
   - component: {fileID: 8435363293441921246}
   - component: {fileID: 4168121500333511772}
+  - component: {fileID: 1189590197232920083}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -91,10 +92,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _direction: {x: 0, y: 0, z: 0}
-  _force: 5
+  _force: 20
   _forkToSpawn: {fileID: 7494399371873344512, guid: deb68942eafbe0f4a863c56e3d346ad2,
     type: 3}
-  _spawnPoint: {fileID: 0}
+  _spawnPoint: {fileID: 5470591492737544751}
+--- !u!143 &1189590197232920083
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435363293441921244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8435363293611592593
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,10 +126,9 @@ GameObject:
   - component: {fileID: 8435363293611592621}
   - component: {fileID: 8435363293611592594}
   - component: {fileID: 8435363293611592595}
-  - component: {fileID: 8435363293611592620}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,22 +206,4 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &8435363293611592620
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435363293611592593}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}

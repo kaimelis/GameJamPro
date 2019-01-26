@@ -9,10 +9,12 @@ public class ForkBehaviour : MonoBehaviour
     private SphereCollider _WaveCollider;
     private bool _activated = false;
     public GameEvent eventToRaise;
+    private ScannerEffectDemo mainCamera;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _WaveCollider = GetComponent<SphereCollider>();
+        mainCamera = Camera.main.GetComponent<ScannerEffectDemo>();
     }
     
     /// <summary>
@@ -31,7 +33,8 @@ public class ForkBehaviour : MonoBehaviour
             _WaveCollider.enabled = true;
             _activated = true;
             eventToRaise.Raise();
-
+            mainCamera.ScannerOrigin = gameObject.transform;
+            mainCamera.StartScanning();
             StartCoroutine("ShrinkRadius");
         }       
     }
@@ -43,9 +46,11 @@ public class ForkBehaviour : MonoBehaviour
     IEnumerator ShrinkRadius(){
         while(_WaveCollider.radius > 0f){
             _WaveCollider.radius -= _forkType.fadeRate*Time.deltaTime;    
+
             yield return null;
         }
 
         _WaveCollider.enabled = false;
+         mainCamera.StopScanning();
     }
 }
