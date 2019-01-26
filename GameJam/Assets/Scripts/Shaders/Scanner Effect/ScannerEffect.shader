@@ -57,7 +57,7 @@ Shader "Hidden/ScannerEffect"
 					o.uv.y = 1 - o.uv.y;
 				#endif				
 
-				o.interpolatedRay = v.ray;
+				o.interpolatedRay = v.ray ;
 
 				return o;
 			}
@@ -98,7 +98,7 @@ Shader "Hidden/ScannerEffect"
 
 				if (dist < _ScanDistance && dist > _ScanDistance - _ScanWidth && linearDepth < 1)
 				{
-					float diff = 1 - (_ScanDistance - dist) / (_ScanWidth);
+					float diff = 1 - (_ScanDistance - dist) / (_ScanWidth); // color
 					half4 edge = lerp(_MidColor, _LeadColor, pow(diff, _LeadSharp));
 					scannerCol = lerp(_TrailColor, edge, diff) + horizBars(i.uv) * _HBarColor;
 					scannerCol *= diff;

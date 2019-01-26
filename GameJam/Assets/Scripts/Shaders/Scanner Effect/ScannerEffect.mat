@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DetailTex:
-        m_Texture: {fileID: 2800000, guid: 1d7772d32fcf74045b6d66df4412de46, type: 3}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EchoTex:
@@ -34,8 +34,8 @@ Material:
     m_Floats:
     - _HBarVisibility: 0.2
     - _LeadSharp: 25
-    - _ScanDistance: 200.67935
-    - _ScanWidth: 2
+    - _ScanDistance: 54.94388
+    - _ScanWidth: 3
     - _Width: 16
     m_Colors:
     - _HBarColor: {r: 0, g: 0.28676468, b: 0.27439448, a: 0}
