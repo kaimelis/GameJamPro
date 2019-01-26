@@ -25,7 +25,7 @@ namespace GameJam
             if(chController.isGrounded)
             {
                 yVelocity = 0;
-                input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
+                input = new Vector3(0, 0, Input.GetAxisRaw("Horizontal"));
                 if (Input.GetButtonDown("Jump"))
                 {
                     yVelocity = jumpSpeed;
