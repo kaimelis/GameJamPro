@@ -8,7 +8,7 @@ public class ForkBehaviour : MonoBehaviour
     [SerializeField] private ForkTypeSO _forkType;    
     private SphereCollider _WaveCollider;
     private bool _activated = false;
-
+    public GameEvent eventToRaise;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -30,9 +30,14 @@ public class ForkBehaviour : MonoBehaviour
             _WaveCollider.radius = _forkType.radius;
             _WaveCollider.enabled = true;
             _activated = true;
+            eventToRaise.Raise();
 
             StartCoroutine("ShrinkRadius");
         }       
+    }
+
+    private void OnCollisionExit(Collision other) {
+        
     }
 
     IEnumerator ShrinkRadius(){
