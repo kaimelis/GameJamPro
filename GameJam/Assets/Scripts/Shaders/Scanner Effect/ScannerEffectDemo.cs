@@ -16,6 +16,12 @@ public class ScannerEffectDemo : MonoBehaviour
 		if (_scanning)
 		{
 			ScanDistance += Time.deltaTime * speed;
+			if(ScanDistance > 30.0f)
+			{
+				_scanning = false;
+				ScanDistance = 0;
+			}
+				
 			// foreach (Scannable s in _scannables)
 			// {
 			// 	if (Vector3.Distance(ScannerOrigin.position, s.transform.position) <= ScanDistance)

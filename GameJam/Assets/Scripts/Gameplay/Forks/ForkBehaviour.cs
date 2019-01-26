@@ -29,9 +29,12 @@ public class ForkBehaviour : MonoBehaviour
             _WaveCollider.radius = _forkType.radius;
             _WaveCollider.enabled = true;
             _activated = true;
-            ForkHitEvent.Raise();            
-            mainCamera.ScannerOrigin = gameObject.transform;
-            mainCamera.StartScanning();
+            ForkHitEvent.Raise();    
+            if(mainCamera != null)
+            {
+                mainCamera.ScannerOrigin = gameObject.transform;
+                mainCamera?.StartScanning();
+            }
             StartCoroutine("ShrinkRadius");
         }       
     }
@@ -48,7 +51,7 @@ public class ForkBehaviour : MonoBehaviour
         }
 
         _WaveCollider.enabled = false;
-         mainCamera.StopScanning();
+       //  mainCamera.StopScanning();
 
         DestroyFork();
     }
