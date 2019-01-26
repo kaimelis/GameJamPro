@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fe28ed15ebd0b343897e7f296d1bfe4, type: 3}
-  m_Name: NewForkType
+  m_Script: {fileID: 11500000, guid: d587aa228aa848a4f890794a476511c4, type: 3}
+  m_Name: RedForkDestroy
   m_EditorClassIdentifier: 
-  _wavetype: 0
-  radius: 5
-  weight: 1
-  fadeRate: 1
+  sentString: 
+  sentInt: 0
+  sentFloat: 0
+  sentBool: 0

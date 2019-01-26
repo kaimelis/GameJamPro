@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3588106565844695280}
   - component: {fileID: 8470466376327228126}
   m_Layer: 11
-  m_Name: Fork_Green
+  m_Name: Fork_Red
   m_TagString: Fork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8971988572d6b364ca700786ccdc52a4, type: 2}
+  - {fileID: 2100000, guid: a723d7f7d6113e544a3dd06a94d213cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _forkType: {fileID: 11400000, guid: 1d6bebb0fd9484341a830376288c4691, type: 2}
-  eventToRaise: {fileID: 11400000, guid: c450567fad2bc954cbb481cc20d13c6e, type: 2}
+  ForkHitEvent: {fileID: 11400000, guid: c450567fad2bc954cbb481cc20d13c6e, type: 2}
+  ForDestroyEvent: {fileID: 11400000, guid: 1ccbb351f67773c45bdcd9fb7f4abf29, type: 2}
 --- !u!135 &8470466376327228126
 SphereCollider:
   m_ObjectHideFlags: 0

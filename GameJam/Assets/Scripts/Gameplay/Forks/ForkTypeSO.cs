@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ForkType{Alpha, Beta, Gamma};
+public enum ForkType{Red, Green, Blue, Length};
 
 public class ForkTypeSO : ScriptableObject
 {

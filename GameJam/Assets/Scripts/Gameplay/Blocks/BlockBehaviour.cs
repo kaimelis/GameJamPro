@@ -8,7 +8,7 @@ public class BlockBehaviour : MonoBehaviour
     private Collider _collider;
     private MeshRenderer _meshrenderer;
     private bool _canBeTriggered = false;
-    private bool _correctSignal = false;
+   
     void Start()
     {
         _meshrenderer = GetComponent<MeshRenderer>();
