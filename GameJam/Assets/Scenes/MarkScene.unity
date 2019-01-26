@@ -588,7 +588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0d2d29b2a0b30458e720eeeac5effe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _blocktype: 0
 --- !u!65 &1091952945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -715,18 +714,7 @@ MonoBehaviour:
         PublicKeyToken=null
     responseForSentInt:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1091952944}
-          m_MethodName: EvaluateInt
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: ResponseWithInt, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
     responseForSentFloat:
@@ -896,7 +884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventAndResponses:
   - name: blue
-    gameEvent: {fileID: 11400000, guid: c450567fad2bc954cbb481cc20d13c6e, type: 2}
+    gameEvent: {fileID: 11400000, guid: 5af1574e7032d0b4485fc9bb4ae89d37, type: 2}
     response:
       m_PersistentCalls:
         m_Calls:
@@ -920,18 +908,7 @@ MonoBehaviour:
         PublicKeyToken=null
     responseForSentInt:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1345546877}
-          m_MethodName: EvaluateInt
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: ResponseWithInt, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
     responseForSentFloat:
@@ -972,7 +949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0d2d29b2a0b30458e720eeeac5effe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _blocktype: 2
 --- !u!65 &1345546878
 BoxCollider:
   m_ObjectHideFlags: 0
