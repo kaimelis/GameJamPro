@@ -14,8 +14,7 @@ public class ForkThrow : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             Camera cam = Camera.main;
             Vector3 recalculatedMousePosition = Input.mousePosition  - cam.WorldToScreenPoint(transform.position);
-            print("Mouse: " + Input.mousePosition + " Recalc: " + recalculatedMousePosition);
-
+          
             Vector3 throwDirection = (recalculatedMousePosition - transform.position).normalized;
             //TODO: nigga it's easy, just change this.
             _direction = new Vector3(0 , throwDirection.y, throwDirection.x);
