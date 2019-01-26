@@ -764,28 +764,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &231340618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8368888012840299292, guid: 7b14c912cccd35a46a565e988305ee49,
-    type: 3}
-  m_PrefabInstance: {fileID: 8368888013062082902}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &231340623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231340618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79151f9244582f645b57853312bb857a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScannerOrigin: {fileID: 370264420}
-  EffectMaterial: {fileID: 2100000, guid: 0d9079b2a57addc42bc122b2732e59b1, type: 2}
-  ScanDistance: 0
-  speed: 30
 --- !u!43 &239294184
 Mesh:
   m_ObjectHideFlags: 0
@@ -11039,6 +11017,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 231340623, guid: 7b14c912cccd35a46a565e988305ee49, type: 3}
+      propertyPath: ScannerOrigin
+      value: 
+      objectReference: {fileID: 370264420}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b14c912cccd35a46a565e988305ee49, type: 3}
 --- !u!1001 &8435363294383155917
@@ -11052,16 +11034,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8435363293611592592, guid: bf7c64bfe57059e42a0104db07606b79,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5470591492737544751, guid: bf7c64bfe57059e42a0104db07606b79,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 8435363293441921247, guid: bf7c64bfe57059e42a0104db07606b79,
         type: 3}
@@ -11116,11 +11088,6 @@ PrefabInstance:
     - target: {fileID: 8435363293441921247, guid: bf7c64bfe57059e42a0104db07606b79,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1189590197232920083, guid: bf7c64bfe57059e42a0104db07606b79,
-        type: 3}
-      propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
