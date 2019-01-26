@@ -24,14 +24,14 @@ public class SuperCharacterController : MonoBehaviour
     [SerializeField]
     bool clampToMovingGround;
 
-  //  [SerializeField]
-   // bool debugSpheres;
+   [SerializeField]
+   bool debugSpheres;
 
-   // [SerializeField]
-   // bool debugGrounding;
+//    [SerializeField]
+//    bool debugGrounding;
 
-   // [SerializeField]
-   // bool debugPushbackMesssages;
+//    [SerializeField]
+//    bool debugPushbackMesssages;
 
     /// <summary>
     /// Describes the Transform of the object we are standing on as well as it's CollisionType, as well
@@ -462,19 +462,19 @@ public class SuperCharacterController : MonoBehaviour
     {
         Gizmos.color = Color.red;
 
-        // if (debugSpheres)
-        // {
-        //     if (spheres != null)
-        //     {
-        //         if (heightScale == 0) heightScale = 1;
+        if (debugSpheres)
+        {
+            if (spheres != null)
+            {
+                if (heightScale == 0) heightScale = 1;
 
-        //         foreach (var sphere in spheres)
-        //         {
-        //             Gizmos.color = sphere.isFeet ? Color.green : (sphere.isHead ? Color.yellow : Color.cyan);
-        //             Gizmos.DrawWireSphere(SpherePosition(sphere), radius);
-        //         }
-        //     }
-        // }
+                foreach (var sphere in spheres)
+                {
+                    Gizmos.color = sphere.isFeet ? Color.green : (sphere.isHead ? Color.yellow : Color.cyan);
+                    Gizmos.DrawWireSphere(SpherePosition(sphere), radius);
+                }
+            }
+        }
     }
 
     public Vector3 SpherePosition(CollisionSphere sphere)

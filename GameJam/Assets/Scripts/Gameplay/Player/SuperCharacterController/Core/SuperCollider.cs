@@ -23,13 +23,13 @@ public static class SuperCollider
         }
         else if (collider is MeshCollider)
         {
-           // RPGMesh rpgMesh = collider.GetComponent<RPGMesh>();
+        //    RPGMesh rpgMesh = collider.GetComponent<RPGMesh>();
 
-            // if (rpgMesh != null)
-            // {
-            //     closestPointOnSurface = rpgMesh.ClosestPointOn(to, radius, false, false);
-            //     return true;
-            // }
+        //     if (rpgMesh != null)
+        //     {
+        //         closestPointOnSurface = rpgMesh.ClosestPointOn(to, radius, false, false);
+        //         return true;
+        //     }
 
             BSPTree bsp = collider.GetComponent<BSPTree>();
 
