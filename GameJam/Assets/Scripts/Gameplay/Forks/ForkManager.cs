@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 public class ForkManager : MonoBehaviour
 {
@@ -15,8 +15,10 @@ public class ForkManager : MonoBehaviour
     private GameObject _currentPrefab = null;
 
     //----Temp
+    [Header("This is tempshit.")]
     [SerializeField] private Renderer _playerColour = null;
     [SerializeField] private Material[] _materials = null;
+    [SerializeField] private TextMeshProUGUI[] _tFields = null;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,10 @@ public class ForkManager : MonoBehaviour
         _inventory.ResetInventory();
         _forkThrow = GetComponent<ForkThrow>();       
         _currentPrefab = GetPrefab(); 
+
+        _tFields[0].text = _inventory.red.forksLeft.ToString();
+        _tFields[1].text = _inventory.green.forksLeft.ToString();
+        _tFields[2].text = _inventory.blue.forksLeft.ToString();
     }
 
 
@@ -82,12 +88,15 @@ public class ForkManager : MonoBehaviour
         switch(_currentFork){
             case ForkType.Red:
                 _inventory.red.forksLeft--;
+                _tFields[0].text = _inventory.red.forksLeft.ToString();
                 break;
             case ForkType.Green:
                 _inventory.green.forksLeft--;
+                _tFields[1].text = _inventory.green.forksLeft.ToString();
                 break;
             case ForkType.Blue:
                 _inventory.blue.forksLeft--;
+                _tFields[2].text = _inventory.blue.forksLeft.ToString();
                 break;
             default:
                 break;
@@ -102,12 +111,15 @@ public class ForkManager : MonoBehaviour
         switch(restoredFork){
             case (int)ForkType.Red:
                 _inventory.red.forksLeft++;
+                _tFields[0].text = _inventory.red.forksLeft.ToString();
                 break;
             case (int)ForkType.Green:
                 _inventory.green.forksLeft++;
+                _tFields[1].text = _inventory.green.forksLeft.ToString();
                 break;
             case (int)ForkType.Blue:
                 _inventory.blue.forksLeft++;
+                _tFields[2].text = _inventory.blue.forksLeft.ToString();
                 break;
         }
     }
