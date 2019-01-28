@@ -12,12 +12,18 @@ public class ForkManager : MonoBehaviour
     
     private ForkType _currentFork = ForkType.Red;
     private ForkThrow _forkThrow = null;
+    private GameObject _currentPrefab = null;
+
+    //----Temp
+    [SerializeField] private Renderer _playerColour = null;
+    [SerializeField] private Material[] _materials = null;
 
     // Start is called before the first frame update
     void Start()
     {
         _inventory.ResetInventory();
-        _forkThrow = GetComponent<ForkThrow>();
+        _forkThrow = GetComponent<ForkThrow>();       
+        _currentPrefab = GetPrefab(); 
     }
 
 
@@ -26,16 +32,18 @@ public class ForkManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             if(EnoughAmmo()){
-                _forkThrow.Throw(GetPrefab());
+                _forkThrow.Throw(_currentPrefab);
                 ManageInventory();
             }            
         }
 
         if(Input.GetKeyDown(KeyCode.E)){           
-            _currentFork = (int)_currentFork < (int)ForkType.Length-1? ++_currentFork : 0;            
+            _currentFork = (int)_currentFork < (int)ForkType.Length-1? ++_currentFork : 0; 
+            _currentPrefab = GetPrefab();           
         }
         if(Input.GetKeyDown(KeyCode.Q)){
             _currentFork = (int)_currentFork > 0? --_currentFork : ForkType.Length-1;
+            _currentPrefab = GetPrefab();
         }
     }
 
@@ -56,10 +64,13 @@ public class ForkManager : MonoBehaviour
     private GameObject GetPrefab(){
        switch(_currentFork){
             case ForkType.Red:
+                _playerColour.material = _materials[0];
                 return _prefabs.red.prefab;
             case ForkType.Green:
+                _playerColour.material = _materials[1];
                 return _prefabs.green.prefab;
             case ForkType.Blue:
+                _playerColour.material = _materials[2];
                 return _prefabs.blue.prefab;
             default:
                 print("No correct type for some reason...");

@@ -57,7 +57,7 @@ public class ScannerEffectDemo : MonoBehaviour
 
 	[ImageEffectOpaque]
 	void OnRenderImage(RenderTexture src, RenderTexture dst)
-	{
+	{		
 		EffectMaterial.SetVector("_WorldSpaceScannerPos", ScannerOrigin.position);
 		EffectMaterial.SetFloat("_ScanDistance", ScanDistance);
 		RaycastCornerBlit(src, dst, EffectMaterial);

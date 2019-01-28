@@ -30,7 +30,7 @@ public class ForkBehaviour : MonoBehaviour
             _WaveCollider.enabled = true;
             _activated = true;
             ForkHitEvent.Raise();    
-            if(mainCamera != null)
+            if(mainCamera)
             {
                 mainCamera.ScannerOrigin = gameObject.transform;
                 mainCamera?.StartScanning();
