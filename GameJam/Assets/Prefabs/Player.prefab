@@ -259,6 +259,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a723d7f7d6113e544a3dd06a94d213cf, type: 2}
   - {fileID: 2100000, guid: 0d90a4759f3238a429573b7aabab3177, type: 2}
   - {fileID: 2100000, guid: 4ec6e7ec883f377449c8e0a5b79ff6b5, type: 2}
+  _tFields:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8435363293611592593
 GameObject:
   m_ObjectHideFlags: 0

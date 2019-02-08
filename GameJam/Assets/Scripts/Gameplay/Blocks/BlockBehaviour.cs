@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BlockBehaviour : MonoBehaviour
+public class BlockBehaviour : MonoBehaviour, IPlatform
 { 
     private Collider _collider;
     private MeshRenderer _meshrenderer;
     private bool _canBeTriggered = false;
    
+    [SerializeField] private ForkType _triggeredByForkTpe = ForkType.Red;
+
     void Start()
     {
         _meshrenderer = GetComponent<MeshRenderer>();
@@ -24,8 +26,7 @@ public class BlockBehaviour : MonoBehaviour
             _canBeTriggered = value;
         }
     }
-
-     void OnTriggerEnter(Collider other)
+/*      void OnTriggerEnter(Collider other)
     {
         ///here, we change layer so player and fork can collide
         if(other.CompareTag("Fork") && _canBeTriggered && !_meshrenderer.isVisible){           
@@ -39,7 +40,7 @@ public class BlockBehaviour : MonoBehaviour
             DisableRenderer();    
             _canBeTriggered = false;             
         }
-    }
+    } */
     void DisableRenderer(){
         _meshrenderer.enabled = false;
         _collider.isTrigger = true;
@@ -51,4 +52,22 @@ public class BlockBehaviour : MonoBehaviour
         
     }
 
+    public void Activate(ForkType type){
+        if(type == _triggeredByForkTpe){
+            EnableRenderer();
+        }
+    }
+
+    public void DeActivate(ForkType type){
+         
+    }
+
+    public void Activate(){
+
+    }
+
+    public void DeActivate(){
+         DisableRenderer();    
+        _canBeTriggered = false; 
+    }
 }

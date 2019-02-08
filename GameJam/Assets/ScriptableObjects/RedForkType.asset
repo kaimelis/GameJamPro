@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fe28ed15ebd0b343897e7f296d1bfe4, type: 3}
-  m_Name: NewForkType
+  m_Name: RedForkType
   m_EditorClassIdentifier: 
-  _wavetype: 0
+  type: 0
   radius: 10
   weight: 1
   fadeRate: 0.3

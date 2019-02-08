@@ -122,9 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c4d89b3ba6695459cf5a95d99b7283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forkType: {fileID: 11400000, guid: 1d6bebb0fd9484341a830376288c4691, type: 2}
-  ForkHitEvent: {fileID: 11400000, guid: 17472c0a9dda2e64eb89f4d034008eee, type: 2}
-  ForDestroyEvent: {fileID: 11400000, guid: 45a719d418f00b344a8e61d11d5ed9ba, type: 2}
+  _forkType: {fileID: 11400000, guid: 10b85c515b7a200429b55b9f123becf7, type: 2}
+  _forkDestroyEvent: {fileID: 11400000, guid: 45a719d418f00b344a8e61d11d5ed9ba, type: 2}
 --- !u!135 &8470466376327228126
 SphereCollider:
   m_ObjectHideFlags: 0

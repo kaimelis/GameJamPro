@@ -8,7 +8,7 @@ public class ForkTypeSO : ScriptableObject
 {
     //[SerializeField] private WaveEffect _effect;
 
-    [SerializeField] private ForkType _wavetype;
+    [SerializeField] public ForkType type;
     public float radius = 0;
     public float weight = 0;
 

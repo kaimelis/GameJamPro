@@ -7,10 +7,10 @@ public class ForkBehaviour : MonoBehaviour
     private Rigidbody _rigidbody = null;    
     [SerializeField] private ForkTypeSO _forkType = null;    
     private SphereCollider _WaveCollider;
-    private bool _activated = false;
-    [SerializeField] private GameEvent ForkHitEvent = null;
-    [SerializeField] private GameEvent ForDestroyEvent = null;
+    private bool _activated = false;  
     private ScannerEffectDemo mainCamera = null;
+
+    [SerializeField] private GameEvent _forkDestroyEvent = null;
     
     void Start()
     {
@@ -28,8 +28,7 @@ public class ForkBehaviour : MonoBehaviour
             // start emiting waves
             _WaveCollider.radius = _forkType.radius;
             _WaveCollider.enabled = true;
-            _activated = true;
-            ForkHitEvent.Raise();    
+            _activated = true;              
             if(mainCamera)
             {
                 mainCamera.ScannerOrigin = gameObject.transform;
@@ -41,6 +40,21 @@ public class ForkBehaviour : MonoBehaviour
 
     private void OnCollisionExit(Collision other) {
         DestroyFork();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.GetComponent<BlockBehaviour>()){
+            BlockBehaviour behaviour = other.GetComponent<BlockBehaviour>();
+            behaviour.Activate(_forkType.type);
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+         if(other.GetComponent<BlockBehaviour>()){
+            BlockBehaviour behaviour = other.GetComponent<BlockBehaviour>();
+            behaviour.DeActivate();
+        }
     }
 
     IEnumerator ShrinkRadius(){
@@ -55,8 +69,8 @@ public class ForkBehaviour : MonoBehaviour
 
         DestroyFork();
     }
-    void DestroyFork(){
-        ForDestroyEvent.Raise();
+    void DestroyFork(){  
+        _forkDestroyEvent.Raise();      
         Destroy(gameObject);
     }
 }
